@@ -279,3 +279,29 @@ if (footerBrand) {
     showFooterBrand();
   }
 }
+
+const workIndex = document.querySelector(".work-index");
+
+if (workIndex) {
+  const showWorkIndex = () => workIndex.classList.add("is-visible");
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    showWorkIndex();
+  } else if ("IntersectionObserver" in window) {
+    const workIndexObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            showWorkIndex();
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    workIndexObserver.observe(workIndex);
+  } else {
+    showWorkIndex();
+  }
+}
