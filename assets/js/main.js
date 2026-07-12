@@ -305,3 +305,38 @@ if (workIndex) {
     showWorkIndex();
   }
 }
+
+const newsArchive = document.querySelector("[data-news-archive]");
+
+if (newsArchive) {
+  const tabs = Array.from(newsArchive.querySelectorAll("[data-news-filter]"));
+  const items = Array.from(newsArchive.querySelectorAll("[data-news-item]"));
+  const count = newsArchive.querySelector("[data-news-count]");
+  const label = newsArchive.querySelector("[data-news-label]");
+  const empty = newsArchive.querySelector("[data-news-empty]");
+
+  const filterNews = (category) => {
+    let visibleCount = 0;
+
+    items.forEach((item) => {
+      const isVisible = category === "all" || item.dataset.category === category;
+      item.hidden = !isVisible;
+      if (isVisible) visibleCount += 1;
+    });
+
+    tabs.forEach((tab) => {
+      const isActive = tab.dataset.newsFilter === category;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+    });
+
+    const activeTab = tabs.find((tab) => tab.dataset.newsFilter === category);
+    count.textContent = String(visibleCount);
+    label.textContent = category === "all" ? "All updates" : activeTab.textContent;
+    empty.hidden = visibleCount !== 0;
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => filterNews(tab.dataset.newsFilter));
+  });
+}
