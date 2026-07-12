@@ -2274,9 +2274,14 @@ p {
   }
 
   .lang-switcher {
-    width: 100%;
+    width: 53px;
     height: 44px;
     border-radius: var(--radius);
+  }
+
+  .nav__actions {
+    align-items: start;
+    margin-left: 15px;
   }
 }
 
@@ -2543,8 +2548,8 @@ p {
   }
 
   .hero {
-    height: calc(100vh - var(--header-height));
-    min-height: calc(100vh - var(--header-height));
+    height: calc(95vh - var(--header-height));
+    min-height: calc(95vh - var(--header-height));
     padding: 0;
   }
 
