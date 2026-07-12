@@ -161,6 +161,7 @@ const impactLine = document.querySelector(".hero__impact");
 
 if (impactLine) {
   const showImpactLine = () => impactLine.classList.add("is-visible");
+  const isMobileImpact = window.matchMedia("(max-width: 768px)").matches;
 
   if ("IntersectionObserver" in window) {
     const impactObserver = new IntersectionObserver(
@@ -172,7 +173,9 @@ if (impactLine) {
           }
         });
       },
-      { threshold: 0.35 }
+      isMobileImpact
+        ? { threshold: 0.05 }
+        : { threshold: 0.35 }
     );
 
     impactObserver.observe(impactLine);
