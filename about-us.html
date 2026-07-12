@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Contact Frontline Youth Network about partnerships, administration, projects, and program content.">
-    <title>Contact Us | Frontline Youth Network</title>
+    <meta name="description" content="Learn how Frontline Youth Network grew from a youth initiative in Berd into a nationwide community connecting education with action.">
+    <title>About Us | Frontline Youth Network</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,11 +38,11 @@
 
         <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
           <div class="nav__links">
-            <a href="about-us.html">About us</a>
+            <a href="about-us.html" aria-current="page">About us</a>
             <a href="index.html#what-we-do">Our work</a>
             <a href="https://frontlineyouth.net/en/news/">News and blog</a>
             <a href="https://frontlineyouth.net/en/resources/">E-resources</a>
-            <a href="contact-us.html" aria-current="page">Contact Us</a>
+            <a href="contact-us.html">Contact Us</a>
           </div>
           <div class="nav__actions">
             <a class="lang-switcher" href="#" aria-label="Switch language to Armenian">
@@ -55,80 +55,98 @@
     </header>
 
     <main id="main">
-      <section class="contact-hero" aria-labelledby="contact-title">
-        <div class="container contact-hero__content">
-          <p class="eyebrow">Let's connect</p>
-          <h1 id="contact-title">Contact Us</h1>
-          <p>Questions, partnerships, and ideas for positive change all start with a conversation.</p>
+      <section class="about-hero" aria-labelledby="about-title">
+        <div class="container about-hero__content">
+          <p class="eyebrow">Our story</p>
+          <h1 id="about-title">About Frontline</h1>
+          <p>Frontline is a youth-centered network that believes meaningful change begins when young people are empowered to shape their own communities.</p>
         </div>
       </section>
 
-      <section class="contact-page">
-        <div class="container contact-page__grid">
-          <div class="contact-page__intro">
-            <p class="eyebrow">Direct inquiries</p>
-            <h2>Start a conversation.</h2>
-            <p class="contact-page__lead">Choose the contact that best matches your inquiry, or use the form to send a message to our team.</p>
-
-            <div class="contact-page__channels">
-              <article class="contact-channel">
-                <p class="contact-channel__label">Partnerships and administration</p>
-                <p>For partnership, business and other administrative inquiries, please contact us through the following email:</p>
-                <a href="mailto:office@frontlineyouth.net">office@frontlineyouth.net</a>
-              </article>
-
-              <article class="contact-channel">
-                <p class="contact-channel__label">Projects and content</p>
-                <p>For project-wise and content-wise inquiries and communication, please contact us through the following email:</p>
-                <a href="mailto:projects@frontlineyouth.net">projects@frontlineyouth.net</a>
-              </article>
-            </div>
-
+      <section class="about-origin section">
+        <div class="container about-origin__grid">
+          <div class="about-origin__story">
+            <p class="eyebrow">Where it began</p>
+            <p class="about-origin__year" aria-hidden="true">2017</p>
+            <h2>From Berd to a nationwide network.</h2>
+            <p>Our journey began in 2017 in the border town of Berd, Tavush, where a small group of young people came together with a shared vision: to create opportunities for learning, participation, and community action where few existed.</p>
+            <p>What started as a local initiative has since grown into a nationwide network working across Armenia and with international partners.</p>
           </div>
-
-          <div class="contact-form-panel">
-            <div class="contact-form-panel__heading">
-              <p class="eyebrow">Send a message</p>
-              <h2>How can we help?</h2>
-              <p>Complete the form and our team will respond to the most relevant inquiry.</p>
-            </div>
-
-            <form class="contact-form" action="#" method="post">
-              <div class="contact-form__row">
-                <div class="form-field">
-                  <label for="contact-name">Full name</label>
-                  <input id="contact-name" name="name" type="text" autocomplete="name" required>
-                </div>
-                <div class="form-field">
-                  <label for="contact-email">Email address</label>
-                  <input id="contact-email" name="email" type="email" autocomplete="email" required>
-                </div>
-              </div>
-
-              <div class="form-field">
-                <label for="contact-topic">Inquiry type</label>
-                <select id="contact-topic" name="topic" required>
-                  <option value="" selected disabled>Select a topic</option>
-                  <option value="partnership">Partnership</option>
-                  <option value="administration">Business or administration</option>
-                  <option value="project">Project inquiry</option>
-                  <option value="content">Content or resources</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div class="form-field">
-                <label for="contact-message">Message</label>
-                <textarea id="contact-message" name="message" rows="6" required></textarea>
-              </div>
-
-              <button class="btn btn--primary contact-form__submit" type="submit">Send message</button>
-              <p class="form-note">Fields marked as required must be completed.</p>
-            </form>
+          <div class="about-origin__media">
+            <img src="assets/images/education.jpg" alt="Young people learning together outdoors in the Tavush landscape">
+            <p>Berd, Tavush <span>Our first community</span></p>
           </div>
         </div>
       </section>
 
+      <section class="about-network section">
+        <div class="container about-network__grid">
+          <div class="about-network__media">
+            <img src="assets/images/networking.jpg" alt="Frontline educators and participants completing a collaborative training program">
+          </div>
+          <div class="about-network__content">
+            <p class="eyebrow">Frontline today</p>
+            <h2>Learning that moves into action.</h2>
+            <p>Today, we collaborate with young people, schools, educators, universities, civil society organizations, and public institutions to design educational experiences that connect knowledge with action.</p>
+            <p>Our work addresses some of today's most important social challenges - from peacebuilding and human rights to environmental sustainability, media literacy, and democratic participation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-methods section" aria-labelledby="methods-title">
+        <div class="container">
+          <div class="about-methods__heading">
+            <p class="eyebrow">How we work</p>
+            <h2 id="methods-title">Four approaches. One connected purpose.</h2>
+          </div>
+          <div class="about-methods__grid">
+            <article>
+              <span>01</span>
+              <h3>Non-formal education</h3>
+              <p>Participatory learning experiences that help young people explore, question, and lead.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Participatory research</h3>
+              <p>Research shaped with communities so lived experience becomes part of public dialogue.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Educational resources</h3>
+              <p>Practical handbooks and learning tools for teachers, youth workers, and young people.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Community engagement</h3>
+              <p>Local initiatives and partnerships that turn shared knowledge into meaningful action.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-resources section">
+        <div class="container about-resources__grid">
+          <div class="about-resources__content">
+            <p class="eyebrow">Resources and innovation</p>
+            <h2>Making complex ideas useful and accessible.</h2>
+            <p>Over the years, we have developed educational handbooks and learning resources used by teachers, youth workers, and young people across Armenia, including publications officially endorsed by the Ministry of Education, Science, Culture and Sports.</p>
+            <p>We continue to explore creative approaches to learning through initiatives such as the PeaceON animated podcast, making complex social topics more accessible, engaging, and relevant for new generations.</p>
+          </div>
+          <div class="about-resources__visual" aria-label="Frontline learning in practice">
+            <img src="assets/images/mission-youth.jpg" alt="Young people taking part in a Frontline discussion circle">
+            <img src="assets/images/peace-on-illustration.png" alt="Peace ON educational mobile application preview">
+          </div>
+        </div>
+      </section>
+
+      <section class="about-belief">
+        <div class="container about-belief__inner">
+          <p class="eyebrow">What we believe</p>
+          <h2>Education is not only about sharing knowledge.</h2>
+          <p>It is about creating communities of learners who are ready to collaborate, lead, and build positive change.</p>
+          <a class="btn btn--light" href="contact-us.html">Start a conversation</a>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -153,10 +171,10 @@
         <nav aria-label="Footer navigation">
           <h2 class="footer__title">Company</h2>
           <ul class="footer__links">
-            <li><a href="about-us.html">About us</a></li>
+            <li><a href="about-us.html" aria-current="page">About us</a></li>
             <li><a href="index.html#what-we-do">Our work</a></li>
             <li><a href="index.html#news">News and blog</a></li>
-            <li><a href="contact-us.html" aria-current="page">Contact us</a></li>
+            <li><a href="contact-us.html">Contact us</a></li>
           </ul>
         </nav>
 
