@@ -310,6 +310,7 @@ const newsArchive = document.querySelector("[data-news-archive]");
 
 if (newsArchive) {
   const tabs = Array.from(newsArchive.querySelectorAll("[data-news-filter]"));
+  const tabList = newsArchive.querySelector(".news-tabs");
   const items = Array.from(newsArchive.querySelectorAll("[data-news-item]"));
   const count = newsArchive.querySelector("[data-news-count]");
   const label = newsArchive.querySelector("[data-news-label]");
@@ -338,5 +339,121 @@ if (newsArchive) {
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => filterNews(tab.dataset.newsFilter));
+  });
+
+  const showNewsTabs = () => tabList.classList.add("is-visible");
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    showNewsTabs();
+  } else if ("IntersectionObserver" in window) {
+    const newsTabsObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            showNewsTabs();
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.45 }
+    );
+
+    newsTabsObserver.observe(tabList);
+  } else {
+    showNewsTabs();
+  }
+}
+
+const resourceLibrary = document.querySelector("[data-resource-library]");
+
+if (resourceLibrary) {
+  const tabs = Array.from(resourceLibrary.querySelectorAll("[data-resource-filter]"));
+  const tabList = resourceLibrary.querySelector(".resource-tabs");
+  const items = Array.from(resourceLibrary.querySelectorAll("[data-resource-item]"));
+  const count = resourceLibrary.querySelector("[data-resource-count]");
+  const label = resourceLibrary.querySelector("[data-resource-label]");
+
+  const filterResources = (category) => {
+    let visibleCount = 0;
+
+    items.forEach((item) => {
+      const isVisible = item.dataset.category === category;
+      item.hidden = !isVisible;
+      if (isVisible) visibleCount += 1;
+    });
+
+    tabs.forEach((tab) => {
+      const isActive = tab.dataset.resourceFilter === category;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+    });
+
+    const activeTab = tabs.find((tab) => tab.dataset.resourceFilter === category);
+    count.textContent = String(visibleCount);
+    label.textContent = activeTab.textContent.replace(/^\d+/, "").trim();
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => filterResources(tab.dataset.resourceFilter));
+  });
+
+  const showResourceTabs = () => tabList.classList.add("is-visible");
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    showResourceTabs();
+  } else if ("IntersectionObserver" in window) {
+    const resourceTabsObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            showResourceTabs();
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.45 }
+    );
+
+    resourceTabsObserver.observe(tabList);
+  } else {
+    showResourceTabs();
+  }
+}
+
+const donationForm = document.querySelector("[data-donation-form]");
+
+if (donationForm) {
+  const amountInputs = Array.from(donationForm.querySelectorAll('input[name="amount"]'));
+  const customAmount = donationForm.querySelector('input[name="custom_amount"]');
+  const submitButton = donationForm.querySelector(".donation-submit");
+  const status = donationForm.querySelector("[data-donation-status]");
+
+  const formatAmount = (value) => new Intl.NumberFormat("en-US").format(value);
+
+  const updateDonationButton = () => {
+    const selected = donationForm.querySelector('input[name="amount"]:checked');
+    const customValue = Number(customAmount.value);
+    const amount = customValue >= 1000 ? customValue : Number(selected ? selected.value : 0);
+    submitButton.textContent = amount ? `Donate ${formatAmount(amount)} AMD` : "Donate";
+  };
+
+  amountInputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      customAmount.value = "";
+      updateDonationButton();
+    });
+  });
+
+  customAmount.addEventListener("input", () => {
+    if (customAmount.value) {
+      amountInputs.forEach((input) => { input.checked = false; });
+    }
+    updateDonationButton();
+  });
+
+  donationForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!donationForm.reportValidity()) return;
+    status.textContent = "The form design is ready. A payment gateway must be connected before donations can be processed.";
   });
 }

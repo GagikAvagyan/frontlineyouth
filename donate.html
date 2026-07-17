@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Support Frontline Youth Network's peacebuilding, human rights, and environmental education work.">
+    <title>Donate | Frontline Youth Network</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body class="donate-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <div class="container header__inner">
+        <a class="btn btn--primary header__donate" href="donate.html" aria-current="page">Donate</a>
+        <a class="brand brand--animated" href="index.html" aria-label="Frontline Youth Network home"><span class="brand__mark-wrap" aria-hidden="true"><svg class="brand__mark" viewBox="0 0 92 82"><polyline points="10 70 32 70 32 48 54 48 54 26 76 26 76 4"></polyline></svg></span><span class="brand__text" aria-hidden="true"><span>Frontline</span><span>Youth</span><span>Network</span></span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation"><span></span><span></span><span></span></button>
+        <nav class="site-nav" id="site-navigation" aria-label="Main navigation"><div class="nav__links"><a href="about-us.html">About us</a><a href="our-work.html">Our work</a><a href="news.html">News &amp; blog</a><a href="e-resources.html">E-resources</a><a href="contact-us.html">Contact Us</a></div><div class="nav__actions"><a class="lang-switcher" href="#" aria-label="Switch language to Armenian"><span class="flag flag--armenia" aria-hidden="true"></span></a><a class="btn btn--primary nav__donate" href="donate.html" aria-current="page">Donate</a></div></nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="donate-hero">
+        <div class="container donate-hero__inner">
+          <div class="donate-panel">
+            <div class="donate-panel__intro">
+              <p class="donate-panel__label">Make a donation</p>
+              <h1>Support young people creating positive change.</h1>
+              <p>Your contribution strengthens peacebuilding education, human rights participation, and youth-led environmental action.</p>
+              <div class="donate-panel__security"><span aria-hidden="true">&#10003;</span><p>Secure payment connection will be enabled when the payment gateway is integrated.</p></div>
+              <img src="assets/images/payment-methods.png" alt="Accepted card payment methods">
+            </div>
+
+            <form class="donation-form" data-donation-form>
+              <fieldset>
+                <legend>Choose an amount</legend>
+                <div class="donation-amounts">
+                  <label><input type="radio" name="amount" value="5000"><span>5,000 AMD</span></label>
+                  <label><input type="radio" name="amount" value="10000" checked><span>10,000 AMD</span></label>
+                  <label><input type="radio" name="amount" value="20000"><span>20,000 AMD</span></label>
+                </div>
+                <label class="donation-custom"><span>Custom amount</span><div><input type="number" name="custom_amount" min="1000" step="500" inputmode="numeric" placeholder="Minimum 1,000"><strong>AMD</strong></div></label>
+              </fieldset>
+
+              <div class="donation-fields">
+                <label><span>Full name</span><input type="text" name="name" autocomplete="name" required></label>
+                <label><span>Email address</span><input type="email" name="email" autocomplete="email" required></label>
+              </div>
+
+              <label class="donation-consent"><input type="checkbox" name="consent" required><span>I agree to the <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-of-use.html">Terms of Use</a>.</span></label>
+              <button class="btn btn--primary donation-submit" type="submit">Donate 10,000 AMD</button>
+              <p class="donation-form__status" role="status" aria-live="polite" data-donation-status></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

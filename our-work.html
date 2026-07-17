@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
 
     <header class="site-header" data-header>
       <div class="container header__inner">
-        <a class="btn btn--primary header__donate" href="#">Donate</a>
+        <a class="btn btn--primary header__donate" href="donate.html">Donate</a>
 
         <a class="brand brand--animated" href="index.html" aria-label="Frontline Youth Network home">
           <span class="brand__mark-wrap" aria-hidden="true">
@@ -40,15 +40,15 @@
           <div class="nav__links">
             <a href="about-us.html">About us</a>
             <a href="our-work.html" aria-current="page">Our work</a>
-            <a href="news.html">News and blog</a>
-            <a href="https://frontlineyouth.net/en/resources/">E-resources</a>
+            <a href="news.html">News &amp; blog</a>
+            <a href="e-resources.html">E-resources</a>
             <a href="contact-us.html">Contact Us</a>
           </div>
           <div class="nav__actions">
             <a class="lang-switcher" href="#" aria-label="Switch language to Armenian">
               <span class="flag flag--armenia" aria-hidden="true"></span>
             </a>
-            <a class="btn btn--primary nav__donate" href="#">Donate</a>
+            <a class="btn btn--primary nav__donate" href="donate.html">Donate</a>
           </div>
         </nav>
       </div>
@@ -182,23 +182,41 @@
       </section>
 
       <section class="work-program work-program--peaceon section" id="peaceon">
-        <div class="container work-peaceon">
-          <div class="work-peaceon__content">
+        <div class="container peaceon-heading">
+          <div>
             <p class="work-program__number">05</p>
             <p class="eyebrow">An Animated Podcast and Interactive Learning Platform</p>
             <h2>PeaceON Podcast</h2>
-            <p class="work-program__intro">PeaceON is an animated educational podcast designed to make complex social issues accessible, engaging, and relevant for young people.</p>
-            <p>Through storytelling, humor, and relatable conversations, the podcast explores the ideas that shape everyday life and encourages young audiences to think critically about the world around them.</p>
-            <p>Hosted by Piso ("cat" in Armenian), a curious animated cat, PeaceON transforms topics that are often perceived as difficult or abstract into engaging learning experiences. Across its episodes, the podcast explores themes such as media and information literacy, disinformation, financial literacy, environmental protection, fast fashion, social media, human rights, and active citizenship, using real-life examples and age-appropriate language.</p>
-            <p>In its latest seasons, Piso is joined by FYN, a skeptical companion who challenges assumptions, asks difficult questions, and encourages evidence-based thinking. Together, the two characters model curiosity, critical thinking, and constructive dialogue, demonstrating that questioning information is an essential part of responsible citizenship.</p>
-            <p>The learning experience extends beyond the podcast through the PeaceON mobile application, where young people can revisit episode content, explore additional learning materials, complete interactive quizzes, assess their knowledge, and earn certificates upon successful completion. By combining animation, gamification, and self-paced learning, the platform creates an engaging educational journey that continues long after each episode ends.</p>
+          </div>
+          <div class="peaceon-heading__copy">
+            <p>PeaceON turns complex social issues into animated stories that young people can understand, question, and discuss.</p>
+            </div>
+        </div>
+
+        <div class="container peaceon-videos">
+          <a class="peaceon-video" href="https://www.youtube.com/watch?si=BjWjrakv05kKJjwc&amp;v=AzlYGFgKywQ&amp;feature=youtu.be" target="_blank" rel="noopener">
+            <img src="assets/images/peaceon-episode-1.jpg" alt="PeaceON animated episode about caring for animals">
+            <span class="peaceon-video__play" aria-hidden="true">&#9654;</span>
+            <span class="peaceon-video__meta"><strong>Watch episode</strong><span>YouTube &#8599;</span></span>
+          </a>
+          <a class="peaceon-video" href="https://www.youtube.com/watch?si=P2_VgrGZdit9GBuQ&amp;v=Ro89SBKJgc4&amp;feature=youtu.be" target="_blank" rel="noopener">
+            <img src="assets/images/peaceon-episode-2.jpg" alt="PeaceON animated episode about protecting and caring for animals">
+            <span class="peaceon-video__play" aria-hidden="true">&#9654;</span>
+            <span class="peaceon-video__meta"><strong>Watch episode</strong><span>YouTube &#8599;</span></span>
+          </a>
+        </div>
+
+        <div class="container peaceon-footer">
+          <div class="peaceon-scenes" aria-label="Scenes from PeaceON episodes">
+            <img src="assets/images/peaceon-scene-1.jpg" alt="Animated PeaceON scene featuring FYN">
+            <img src="assets/images/peaceon-scene-2.jpg" alt="Animated PeaceON street scene featuring Piso and other animals">
+          </div>
+          <div class="peaceon-footer__copy">
+            <p>The learning continues in the PeaceON mobile app through additional materials, interactive quizzes, knowledge checks, and certificates.</p>
             <div class="work-peaceon__actions">
-              <a class="btn btn--light" href="https://www.youtube.com/channel/UCpuVf02GFddqtocgBL-URlQ" target="_blank" rel="noopener">Watch PeaceON</a>
+              <a class="btn btn--primary" href="https://www.youtube.com/channel/UCpuVf02GFddqtocgBL-URlQ" target="_blank" rel="noopener">More on YouTube</a>
               <a class="btn btn--secondary" href="https://play.google.com/store/apps/details?id=com.peaceon.frontline" target="_blank" rel="noopener">Explore the app</a>
             </div>
-          </div>
-          <div class="work-peaceon__visual">
-            <img src="assets/images/peace-on-illustration.png" alt="Peace ON animated learning application">
           </div>
         </div>
       </section>
@@ -220,7 +238,7 @@
             </span>
           </a>
           <p>We help young people turn local challenges into sustainable solutions for their communities.</p>
-          <a class="footer__donate" href="#">Donate now <span aria-hidden="true">&#8599;</span></a>
+          <a class="footer__donate" href="donate.html">Donate now <span aria-hidden="true">&#8599;</span></a>
         </div>
 
         <nav aria-label="Footer navigation">
@@ -228,7 +246,8 @@
           <ul class="footer__links">
             <li><a href="about-us.html">About us</a></li>
             <li><a href="our-work.html" aria-current="page">Our work</a></li>
-            <li><a href="news.html">News and blog</a></li>
+            <li><a href="news.html">News &amp; blog</a></li>
+            <li><a href="e-resources.html">E-resources</a></li>
             <li><a href="contact-us.html">Contact us</a></li>
           </ul>
         </nav>
@@ -236,9 +255,8 @@
         <nav aria-label="Legal navigation">
           <h2 class="footer__title">Legal</h2>
           <ul class="footer__links">
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Terms of use</a></li>
-            <li><a href="#">Cookie policy</a></li>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms-of-use.html">Terms of use</a></li>
           </ul>
         </nav>
 
