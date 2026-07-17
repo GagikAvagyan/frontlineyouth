@@ -2566,6 +2566,7 @@ p {
   color: var(--color-ink);
   font-size: 16px;
   font-weight: 700;
+  white-space: nowrap;
   text-decoration: none;
   background-image: linear-gradient(var(--color-primary), var(--color-primary));
   background-position: left center;
@@ -4152,16 +4153,19 @@ p {
   }
 
   .work-index__inner {
-    grid-template-columns: repeat(5, minmax(175px, 1fr));
+    grid-template-columns: repeat(6, max-content);
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .work-index a {
-    min-height: 66px;
-    padding: 10px 14px;
+    min-height: 58px;
+    gap: 7px;
+    padding: 8px 12px;
   }
 
   .work-program {
-    scroll-margin-top: calc(var(--header-height) + 66px);
+    scroll-margin-top: calc(var(--header-height) + 58px);
   }
 
   .work-program__header h2,
